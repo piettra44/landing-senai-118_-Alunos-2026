@@ -4,6 +4,181 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
-/* Continuar digitação código CSS (deste ponto) */
+/* Variáveis do Tema (Cores) */
+
+:root {
+
+  --cor-primaria: #f9003d;
+  --cor-secundaria: #A259F7;
+  --cor-destaque: #ffaf00;
+  --fundo-escuro: #080324;
+  --texto-claro: #FFF;
+  --texto-cinza: #C7BAB3;
+}
+
+/* Estilos gerais */
+
+body{
+
+  background-color: var(--fundo-escuro);
+  color: var(--texto-claro);
+  font-family: 'Bebas Neue' , sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+address {
+
+  /* Remove o itálico padrãoda tag address */
+  font-style: normal;
+
+}
+
+.container {
+
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+
+}
+
+/* Header */
+
+.header{
+
+  background-color: var(--cor-primaria);
+  position: fixed; /* Mantem header no topo fixo */
+  width: 100%;
+  z-index: 1m;
+  padding: 0.5rem 0;
+
+}
+
+.nav-header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  /* Inverte a ordem */
+  /*flex-direction: row-reverse; */
+
+}
+
+.logo{
+
+  height: 40px;
+
+}
+
+/* Menu */
+
+.menu {
+
+  display: flex;
+  gap: 1rem; /* Espaço o links do menu */
+  list-style: none; /* Retirar a bolinha da lista */
+
+}
+
+.menu a {
+
+  color: var(--texto-claro);
+  text-decoration: none; /* Retira o undeline do link */
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: color 0.3 ease;
+
+}
+
+.menu a:hover{
+
+  color: var(--cor-destaque); /*Quando o mouse estiver em cima */
+
+}
+
+.btn-menu {
+  display: none; /* Esconde o menu hamburguer (Telas grandes) */
+}
+
+
+
+/* Botão Contate-nos */
+
+.botao {
+  background-color: var(--cor-secundaria);
+  color: var(--texto-claro) !important; /* Força o texto a ser branco */ 
+  padding: 0.6rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.botao:hover {
+
+  background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-destaque));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Efeito de Elevação */
+  transform: translate(-2px) scale(1.05); /* Efeito de elevação */
+
+}
+
+/* _____________________________________ */
+/* Responsividade (Tamanho de telas) */
+
+/* Regra para a quando a tela for menos que 768px */
+
+ @media (max-width: 768px) {
+
+  /* Header */
+  .nav-header{
+    justify-content: center;
+  }
+
+  /* Menu */
+  .menu{
+    padding-top: 0;
+  }
+
+  /* _____________________________________ */
+  /* Programação exclusiva para menu hamburguer */
+
+  .btn-menu {
+
+    display: block;
+    background: none;
+    border: none;
+    color: var(--texto-claro);
+    font-size: 2.5rem;
+    cursor: pointer;
+
+  }
+  .nav-header{
+
+    justify-content: space-between;
+  
+  }
+  
+  .menu {
+
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+
+  }
+
+  .menu.aberto {
+    
+    display: flex;
+
+  }
+ }
