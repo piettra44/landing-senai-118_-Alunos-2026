@@ -94,6 +94,7 @@ address {
   font-weight: 600;
   font-size: 1.2rem;
   transition: color 0.3 ease;
+  text-shadow: 2px 3px 3px rgba(18, 18, 18, 0.8);
 
 }
 
@@ -145,6 +146,7 @@ address {
 .conteudo-banner h1 {
   font-size: 5rem;
   margin-bottom: 1rem;
+  text-shadow: 6px 6px 6px rgba(179, 17, 31, 0.8);
 }
 
 .linha-destaque {
@@ -158,6 +160,7 @@ address {
   font-size: 1.8rem;
   color: var(--texto-cinza);
   margin-bottom: 2rem;
+  text-shadow: 1.5px 3px 3px rgba(182, 178, 178, 0.8);
 }
 
 .mouse {
@@ -168,7 +171,7 @@ address {
 
 /* Seção Sobre */
 .sobre {
-  background-color: #181012;
+  background-color: #070015;
   padding: 4rem 0;
 }
 
@@ -177,6 +180,7 @@ address {
   font-size: 3rem;
   margin-bottom: 2rem;
   text-align: center;
+  text-shadow: 2px 3px 3px rgba(221, 140, 147, 0.8);
 }
 
 /*Container para organizar imagem e texto lado a lado*/
@@ -215,6 +219,80 @@ address {
 
 .texto-sobre p {
   color: var(--texto-cinza);
+  font-size: 1.2rem;
+}
+
+/*Cards (Estilização)*/
+.info {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.cards-info {
+  list-style: none; /*Remove a bolinha da lista*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /*Permite os textos qubrar p/ linhas de baixo*/
+}
+
+.card {
+  background-color: #241a1c;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.card h3 {
+  color: var(--cor-destaque);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 3px 3px rgba(125, 120, 14, 0.8);
+}
+
+.card p{
+  background-color: var(--fundo-escuro);
+  padding: 1.5rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Seção Endereço */
+.endereco {
+  padding: 4rem 0;
+}
+
+.conteudo-endereco {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.texto-endereco {
+  font-size: 1.5rem;
+  line-height: 1.8; /* Aumenta o espaçamento entre as linhas para melhor leitura */
+  flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
+}
+
+.mapa {
+  width: 350px;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) Adiciona uma sombra para destacar o mapa */
+  box-shadow: 6px 6px 6px rgba(44, 17, 179, 0.8);
+}
+
+/* Footer (Rodapé) */
+.footer {
+  background-color: var(--cor-primaria);
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 4rem;
   font-size: 1.2rem;
 }
 
@@ -278,4 +356,14 @@ address {
     display: flex;
 
   }
+
+/* Reduz o tamanho do texto em telas menores */
+  .conteudo-banner h1 {font-size: 3.5rem;}
+  .subtitulo {font-size: 1.5rem;}
+  .titulo-secao {font-size: 2.5rem;}
+  .texto-sobre h3 {font-size: 2rem;}
+  .texto-sobre p {font-size: 1.1rem;}
+  .card h3{ font-size: 1.5rem;}
+  .card p {font-size: 1.3rem;}
+  .texto-endereco {font-size: 1.1rem;}
  }
